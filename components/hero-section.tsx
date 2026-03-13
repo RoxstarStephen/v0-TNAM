@@ -30,7 +30,7 @@ export function HeroSection({ onGetStarted }: HeroSectionProps) {
   };
 
   return (
-    <section className="min-h-screen md:min-h-[80vh] bg-slate-900 text-white flex items-center justify-center px-4 md:px-8 py-20 md:py-0">
+    <section className="min-h-screen md:min-h-[80vh] bg-slate-900 text-white flex items-center justify-center px-4 md:px-8 py-20 md:py-0 mt-16 md:mt-20">
       <motion.div
         className="max-w-4xl mx-auto text-center"
         variants={containerVariants}

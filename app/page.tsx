@@ -1,6 +1,7 @@
 'use client';
 
 import { useRef } from 'react';
+import { Header } from '@/components/header';
 import { HeroSection } from '@/components/hero-section';
 import { ValuationForm } from '@/components/valuation-form';
 import { TrustGrid } from '@/components/trust-grid';
@@ -18,6 +19,9 @@ export default function Home() {
 
   return (
     <main className="w-full overflow-x-hidden">
+      {/* Fixed Header */}
+      <Header onGetStarted={handleGetStarted} />
+
       {/* Hero Section */}
       <HeroSection onGetStarted={handleGetStarted} />
 
