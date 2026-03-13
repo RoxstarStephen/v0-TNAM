@@ -29,10 +29,15 @@ export function HeroSection({ onGetStarted }: HeroSectionProps) {
     },
   };
 
+  const scrollToNext = () => {
+    const nextSection = document.getElementById('how-it-works');
+    nextSection?.scrollIntoView({ behavior: 'smooth' });
+  };
+
   return (
-    <section className="min-h-screen md:min-h-[80vh] bg-slate-900 text-white flex items-center justify-center px-4 md:px-8 py-20 md:py-0 mt-16 md:mt-20">
+    <section className="h-screen bg-slate-900 text-white flex flex-col items-center justify-center px-4 md:px-8 overflow-hidden mt-16 md:mt-20">
       <motion.div
-        className="max-w-4xl mx-auto text-center"
+        className="max-w-4xl mx-auto text-center flex flex-col items-center justify-center"
         variants={containerVariants}
         initial="hidden"
         animate="visible"
@@ -67,12 +72,13 @@ export function HeroSection({ onGetStarted }: HeroSectionProps) {
 
         {/* Scroll Indicator */}
         <motion.div
-          className="mt-16 flex justify-center"
+          className="mt-16 flex justify-center cursor-pointer"
           animate={{ y: [0, 8, 0] }}
           transition={{ duration: 2, repeat: Infinity }}
           variants={itemVariants}
+          onClick={scrollToNext}
         >
-          <div className="text-slate-400 text-sm flex flex-col items-center gap-2">
+          <div className="text-slate-400 hover:text-amber-400 text-sm flex flex-col items-center gap-2 transition-colors duration-300">
             <span>Scroll to explore</span>
             <ChevronDown className="w-5 h-5" />
           </div>

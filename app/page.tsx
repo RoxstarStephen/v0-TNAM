@@ -26,11 +26,14 @@ export default function Home() {
       <HeroSection onGetStarted={handleGetStarted} />
 
       {/* Trust Grid Section */}
-      <TrustGrid />
+      <section id="how-it-works">
+        <TrustGrid />
+      </section>
 
       {/* Valuation Form Section */}
       <section
         ref={formRef}
+        id="valuation"
         className="py-16 md:py-24 px-4 md:px-8 bg-white scroll-mt-20"
       >
         <div className="max-w-6xl mx-auto">
@@ -47,10 +50,14 @@ export default function Home() {
       </section>
 
       {/* Testimonial Section */}
-      <TestimonialSection />
+      <section id="testimonials">
+        <TestimonialSection />
+      </section>
 
       {/* FAQ Section */}
-      <FAQSection />
+      <section id="faq">
+        <FAQSection />
+      </section>
 
       {/* Footer */}
       <Footer />
